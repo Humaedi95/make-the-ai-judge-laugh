@@ -10,8 +10,9 @@ const JOKE =
   "I've typed 'per my last email' so often that Outlook now autocompletes it before I even finish the insult.";
 
 const OUTPUT_FILENAME = "entry.txt";
+const DEFAULT_OUTPUT_DIR = "/output";
 
-const outputDir = process.env.OUTPUT_DIR ?? "/output";
+const outputDir = process.env.OUTPUT_DIR ?? DEFAULT_OUTPUT_DIR;
 const outputFile = join(outputDir, OUTPUT_FILENAME);
 
 mkdirSync(outputDir, { recursive: true });
