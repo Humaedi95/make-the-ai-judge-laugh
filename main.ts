@@ -9,8 +9,10 @@ import { join } from "node:path";
 const JOKE =
   "I've typed 'per my last email' so often that Outlook now autocompletes it before I even finish the insult.";
 
+const OUTPUT_FILENAME = "entry.txt";
+
 const outputDir = process.env.OUTPUT_DIR ?? "/output";
-const outputFile = join(outputDir, "entry.txt");
+const outputFile = join(outputDir, OUTPUT_FILENAME);
 
 mkdirSync(outputDir, { recursive: true });
 writeFileSync(outputFile, JOKE, "utf8");
